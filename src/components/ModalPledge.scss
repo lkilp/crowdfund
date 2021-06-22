@@ -1,0 +1,99 @@
+.ModalPledge {
+    width: 630px;
+    border: 2px solid var(--light-gray-border);
+    border-radius: var(--boxes-border-radius);
+    margin: 25px auto;
+    
+
+
+    &.out-of-stock {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 30px 25px;
+    }
+    .input-container {
+        position: relative;
+    }
+
+    label {
+        margin-left: 15px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--moderate-cyan);
+        }
+    }
+
+    .pledge-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      
+        border: 1px solid var(--out-of-stock-light-gray);
+        transition: 0.2s all linear;
+        margin-right: 5px;
+      
+        position: relative;
+        top: 4px;
+        cursor: pointer;
+      }
+
+      .pledge-select:hover {
+        border: 1px solid var(--moderate-cyan);
+      }
+
+      .pledge-select:checked {
+        background: radial-gradient(var(--moderate-cyan) 40%, white 31%);
+      }
+      
+      .pledge-info {
+        padding-left: 67px;
+        padding-right: 25px;
+        padding-bottom: 30px;
+        color: var(--dark-gray);
+        margin: 0;
+    }
+
+    .pledge-item {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 7px;
+        padding-left: 15px;
+    }
+
+    .pledge-item.not-visible {
+        display: none;
+    }
+
+    .pledge-amount {
+        font-weight: 700;
+        color: var(--moderate-cyan);
+    }
+
+    .amount-left {
+        display: flex;
+    }
+
+    .amount {
+        font-weight: 700;
+        padding-right: 10px;
+    }
+
+    .left {
+        color: var(--dark-gray);
+    }
+
+    
+}

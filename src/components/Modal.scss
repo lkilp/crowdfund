@@ -1,0 +1,51 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow-y: hidden;
+//     height: 100vh;
+//   overflow-y: hidden;
+//   padding-right: 15px;
+    // overflow: hidden;
+    .modal-content {
+        // height: 1000px;
+        max-height: 100vh;
+        width: var(--width);
+        background-color: white;
+        border: 1px solid var(--dark-gray);
+        border-radius: var(--boxes-border-radius);
+        overflow: auto;
+        text-align: left;
+        
+        
+        h2, .project-info {
+            padding: 0 50px;
+        }
+        
+        .project-info {
+            color: var(--dark-gray);
+            padding-bottom: 20px
+        }
+    }
+
+    .close-button {
+        height: 15px;
+        width: 15px;
+        margin: 30px 25px 20px auto;
+        background-color: var(--dark-gray);
+        opacity: 0.7;
+        -webkit-mask: url('../assets/images/icon-close-modal.svg') no-repeat center;
+        mask: url('../assets/images/icon-close-modal.svg') no-repeat center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+        }
+    }
+}

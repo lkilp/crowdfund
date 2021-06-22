@@ -1,0 +1,67 @@
+.PledgeForm {
+    .enter-pledge {
+        border-top: 2px solid var(--light-gray-border);
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
+
+    .enter-pledge-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+    }
+
+    .enter-your-pledge {
+        color: var(--dark-gray);
+    }
+
+    .pledge-continue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .change-pledge-amount, .cyan-button {
+        width: 100px;
+    }
+
+    .change-pledge-amount {
+        height: 46px;
+        border-radius: 25px;
+        padding: 0;
+        border: 2px solid var(--light-gray-border);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cyan-button {
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .dollar-sign {
+        color: var(--out-of-stock-light-gray);
+        font-weight: 700;
+        top: -1px;
+        position: relative;
+    }
+
+    .dollar-amount {
+        width: 30px;
+        font-weight: 700;
+        border: none;
+        padding: 10px;
+        position: relative;
+        top: 0.5px;
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+    }
+
+}

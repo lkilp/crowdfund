@@ -1,0 +1,35 @@
+.App {
+
+  --moderate-cyan: hsl(176, 50%, 47%);
+  --dark-cyan: hsl(176, 72%, 28%);
+  --dark-gray: hsl(0, 0%, 48%);
+  --light-gray-border: #f3f3f3;
+  --out-of-stock-light-gray: #c3c3c3;
+  --out-of-stock-light-cyan: #a6d6d1;
+
+  --boxes-border-radius: 15px;
+  --mobile-side-margin: 15px;
+  --width: 730px;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  position: relative;
+  text-align: center;
+  background-color: rgb(249, 249, 249);
+
+  .cyan-button {
+    background-color: var(--moderate-cyan);
+    border-radius: 25px;
+    color: white;
+    border: none;
+    font-weight: 700;
+
+    &:hover {
+        background-color: var(--dark-cyan);
+        cursor: pointer;
+    }
+}
+}
+

@@ -1,0 +1,117 @@
+.Product {
+    --product-button-width: 155px;
+    --product-button-height: 40px;
+
+    border: 2px solid #d6d6d6;
+    border-radius: var(--boxes-border-radius);
+    margin: 20px var(--side-padding);
+    padding: 30px 30px 25px 30px;
+
+    h3, p {
+        padding: 0;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .product-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            margin: 0;
+        }
+
+        .pledge {
+            color: var(--moderate-cyan);
+            font-weight: 700;
+        }
+    }
+
+    .amount-select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .amount-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .amount {
+        padding-right: 10px;
+    }
+
+    .cyan-button {
+        width: var(--product-button-width);
+        height: var(--product-button-height);
+
+        &.out-of-stock-button {
+            background-color: var(--out-of-stock-light-gray);
+
+            &:hover {
+                cursor: auto;
+                background-color: var(--out-of-stock-light-gray);
+            }
+        }
+    }
+
+    &.out-of-stock {
+        // border: 1px solid var(--light-gray-border);
+
+        // h3 {
+        //     color: var(--dark-gray);
+        // }
+
+        // .pledge {
+        //     color: var(--out-of-stock-light-cyan);
+        // }
+
+        // p {
+        //     color: var(--out-of-stock-light-gray);
+        // }
+
+        // .amount {
+        //     color: var(--dark-gray);
+        // }
+
+        // .total {
+        //     color: var(--out-of-stock-light-gray);
+        // }
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    @media screen and (max-width: 600px) {
+         & {
+            margin: 20px var(--mobile-side-padding);
+            padding: 30px var(--mobile-side-padding) 25px var(--mobile-side-padding);
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+       
+
+        .product-title, .amount-select {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h3 {
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .amount-left {
+            margin-bottom: 20px;
+        }
+        
+    }
+}

@@ -1,0 +1,123 @@
+.ProjectInfo {
+    --height: 50px;
+    width: var(--width);
+    background-color: white;
+    border: 1px solid var(--light-gray-border);
+    border-radius: var(--boxes-border-radius);
+    margin-bottom: 20px;
+
+    .mastercraft-logo {
+        --size: 40px;
+        background-image: url('../assets/images/logo-mastercraft.svg');
+        height: var(--size);
+        width: var(--size);
+        background-size: contain;
+        position: relative;
+        margin: -20px auto 0 auto;
+    }
+
+    h1 {
+        margin-top: 30px;
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-weight: 500;
+        color: var(--dark-gray);
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px var(--side-padding);
+    }
+
+    .cyan-button {
+        width: 200px;
+        height: var(--height);
+    }
+
+    .bookmark-button {
+        color: var(--dark-gray);
+        font-weight: 700;
+        width: 170px;
+        height: var(--height);
+        border-radius: var(--height);
+        border: none;
+        position: relative;
+        padding-left: 35px;
+
+        &:hover {
+            cursor: pointer;
+
+            .bookmark-icon {
+                filter: invert(27%) grayscale(100%);
+            }
+        }
+
+        &.active {
+            color: var(--dark-cyan);
+        }
+    }
+
+    .bookmark-icon {
+        background-image: url('../assets/images/icon-bookmark.svg');
+        height: var(--height);
+        width: var(--height);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.active {
+            background-image: url('../assets/images/icon.bookmarked.svg');
+            
+        }
+    }
+   
+
+    @media screen and (max-width: 850px) {
+        & {
+            width: 100%;   
+        }
+
+        h1, h3 {
+            padding: 0 var(--side-padding);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        h1, h3 {
+            padding: 0 var(--mobile-side-padding);
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        .buttons {
+            padding: 30px var(--mobile-side-padding);
+        }
+        
+       .cyan-button {
+           width: 240px;
+       }
+    }
+
+    @media screen and (max-width: 500px) {
+        .bookmark-button {
+           width: var(--height);
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
