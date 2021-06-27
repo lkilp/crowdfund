@@ -16,7 +16,6 @@
 
     .data-column.line {
         border-right: 1px solid #d4d4d4;
-        // border: 1px solid red;
     }
 
     .mobile-line {
@@ -26,7 +25,6 @@
     .data-column {
         text-align: left;
         padding-left: var(--side-padding);
-
     }
 
     .progress-holder {
@@ -36,10 +34,8 @@
     progress[value] {
         -webkit-appearance: none;
         appearance: none;
-
         width: 100%;
         height: var(--progress-height);
-
     }
 
     progress[value]::-webkit-progress-bar {
@@ -60,8 +56,6 @@
     }
 
     @media screen and (max-width: 600px) {
-        
-
         .progress-holder {
             padding: 0 var(--mobile-side-padding);
         }
@@ -72,11 +66,9 @@
     }
 
     @media screen and (max-width: 475px) {
-
         .data-holder {
             grid-template-columns: 1fr;
             align-items: center;
-            // border: 1px solid red;
         }
 
         .data-column {
@@ -86,7 +78,7 @@
 
         .data-column.line {
             border-right: none;
-            margin: 10px 90px;
+            margin: 10px 0px;
         }
 
         .mobile-line {
@@ -94,8 +86,6 @@
             border-bottom: 2px solid #d4d4d4; 
             width: 100px;
             height: 2px;
-            
         }
-
     }
 }

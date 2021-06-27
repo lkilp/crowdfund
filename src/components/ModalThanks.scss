@@ -1,0 +1,81 @@
+.ModalThanks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-thanks-content {
+        height: 450px;
+        max-width: 540px;
+        background-color: white;
+        border-radius: var(--boxes-border-radius);
+        position: relative;
+        top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 45px 50px 50px 50px;      
+    }
+
+    .modal-thanks-text {
+        margin: 0 50px;
+        
+        p {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    .checkmark  {
+        background-image: url('../assets/images/icon-check.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        --size: 85px;
+        height: var(--size);
+        width: var(--size);
+        margin-top: 45px;
+    }
+
+    .cyan-button.got-it {
+        height: 50px;
+        width: 105px;
+        margin-bottom: 50px;        
+    }
+
+    @media screen and (max-width: 475px) {
+        .modal-thanks-content {
+            height: 380px;
+            margin: 0 25px;
+        }
+
+        .modal-thanks-text {
+            margin: 0 25px;
+
+            h2 {
+                font-size: 22px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .checkmark {
+            --size: 60px;
+            margin-top: 30px;
+        }
+
+        .cyan-button.got-it {
+            height: 40px;
+            margin-bottom: 35px;
+        } 
+    }
+}

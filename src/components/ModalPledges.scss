@@ -1,4 +1,4 @@
-.Modal {
+.ModalPledges {
     position: fixed;
     top: 0;
     right: 0;
@@ -6,38 +6,43 @@
     left: 0;
     background-color: rgba(black, 0.6);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    // overflow-y: hidden;
-//     height: 100vh;
-//   overflow-y: hidden;
-//   padding-right: 15px;
-    // overflow: hidden;
+    overflow: auto;
+    padding-top: 180px;
+    padding-bottom: 280px;
+
     .modal-content {
-        // height: 1000px;
-        max-height: 100vh;
-        width: var(--width);
+        width: 730px;
+        max-width: calc(100vw - 40px);
         background-color: white;
         border: 1px solid var(--dark-gray);
         border-radius: var(--boxes-border-radius);
-        overflow: auto;
         text-align: left;
-        
+        padding-bottom: 50px;
+        position: relative;
         
         h2, .project-info {
             padding: 0 50px;
         }
+
+        h2 {
+            margin-top: 50px;
+        }
         
         .project-info {
             color: var(--dark-gray);
-            padding-bottom: 20px
+            padding-bottom: 10px
         }
     }
 
     .close-button {
+        position: absolute;
         height: 15px;
         width: 15px;
-        margin: 30px 25px 20px auto;
+        --size: 35px;
+        right: var(--size);
+        top: var(--size);
         background-color: var(--dark-gray);
         opacity: 0.7;
         -webkit-mask: url('../assets/images/icon-close-modal.svg') no-repeat center;
@@ -46,6 +51,22 @@
         &:hover {
             cursor: pointer;
             background-color: black;
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+        .modal-content {            
+            h2 {
+                margin-top: 30px;
+            }
+
+            h2, .project-info {
+                padding: 0 20px;
+             }
+        }
+
+        .close-button {
+            right: var(--mobile-side-margin);
         }
     }
 }

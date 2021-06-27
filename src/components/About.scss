@@ -26,23 +26,16 @@
         width: 100%;
     }
 
-    @media screen and (max-width: 600px) {
-       
-        
+    @media screen and (max-width: 600px) {   
         h3, p {
             padding: 0 var(--mobile-side-padding);
         }
     }
 
     @media screen and (max-width: 475px) {
-
-        
-
         h3 {
             margin-top: 40px;
             margin-bottom: 0;
-        }
-        
+        }   
     }
-
 }

@@ -1,5 +1,4 @@
 .Project {
-
     --side-padding: 45px;
     --mobile-side-padding: 20px;
 
@@ -9,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-
 
     .amount {
         font-size: 2em;
@@ -21,8 +19,6 @@
         font-weight: 500;
     }
 
-   
-
     @media screen and (max-width: 850px) {
         flex: 1;
         margin: 0 var(--mobile-side-margin);
@@ -32,7 +28,6 @@
         & {
             flex: 1;
             margin: 0 var(--mobile-side-margin);
-        }
-        
+        } 
     }
 }

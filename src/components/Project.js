@@ -5,9 +5,10 @@ import ProjectData from './ProjectData';
 import ProjectInfo from './ProjectInfo';
 
 const Project = (props) => {
+    const { openPopup } = props;
     return(
         <div className="Project">
-            <ProjectInfo />
+            <ProjectInfo openPopup={openPopup} />
             <ProjectData />
             <About openPopup={props.openPopup}/>
         </div>

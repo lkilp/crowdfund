@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import './ProjectInfo.scss';
 
-const ProjectInfo = () => {
+const ProjectInfo = (props) => {
+    const { openPopup } = props;
     const [bookmarked, setBookmarked] = useState(false);
-    const activateBookmarked = () => {
-        setBookmarked(true);
-    }
-
-    const disactivateBookmarked = () => {
-        setBookmarked(false);
+    const toggleBookmarked = () => {
+        setBookmarked(!bookmarked);
     }
     return(
         <div className="ProjectInfo">
@@ -17,29 +14,13 @@ const ProjectInfo = () => {
             <h3>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</h3>
             {bookmarked}
             <div className="buttons">
-                <button className="cyan-button"  >Back this project</button>
-                { !bookmarked ? 
-                <button className="bookmark-button" onClick={activateBookmarked}><div className="bookmark-icon"></div><span>Bookmark</span></button> :
-                <button className="bookmark-button active" onClick={disactivateBookmarked}><div className="bookmark-icon active"></div><span>Bookmarked</span></button>}
-            
+                <button className="cyan-button" onClick={() => openPopup('modal')} >Back this project</button>
+                <button className={'bookmark-button' + (bookmarked ? ' active' : '')} onClick={toggleBookmarked}><div className="bookmark-icon"> 
+                <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><circle fill={bookmarked ? "var(--dark-cyan)" : "#2F2F2F" } cx="28" cy="28" r="28"/><path fill={bookmarked ? "white" : "#B1B1B1"} d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+                </div><span>{bookmarked ? 'Bookmarked' : 'Bookmark'}</span></button>
             </div>
         </div>
     )
 }
 export default ProjectInfo;
 
-// function App() {
-//     const [popup, setPopup] = useState(false);
-//     const closePopup = () => {
-//       setPopup(false);
-//     }
-//     const openPopup =() => {
-//       setPopup(true);
-//     }
-//     return (
-//       <div className="App">
-//         <Header />
-//         <Project openPopup={openPopup} />
-//         { popup && <Modal closePopup={closePopup}/> }
-//       </div>
-//     );

@@ -16,7 +16,7 @@ const Product = (props) => {
                     <div className="amount">{product.amountLeft}</div>
                     <div className="total">left</div>
                 </div>
-                <button className={"cyan-button" + (product.amountLeft === '0' ? ' out-of-stock-button' : '')} onClick={openPopup}>{ product.amountLeft !== '0' ? 'Select Reward' : 'Out of Stock' } </button>
+                <button className={"cyan-button" + (product.amountLeft === '0' ? ' out-of-stock-button' : '')} onClick={() => openPopup('modal')} >{ product.amountLeft !== '0' ? 'Select Reward' : 'Out of Stock' } </button>
             </div>
         </div>
     )

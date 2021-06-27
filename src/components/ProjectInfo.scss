@@ -59,26 +59,22 @@
 
         &.active {
             color: var(--dark-cyan);
+            padding-left: 50px;
+
+            &:hover {
+               .bookmark-icon {
+                filter: opacity(60%); 
+                } 
+            }  
         }
     }
 
     .bookmark-icon {
-        background-image: url('../assets/images/icon-bookmark.svg');
-        height: var(--height);
-        width: var(--height);
         position: absolute;
-        top: 0;
+        top: -3px;
         left: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        &.active {
-            background-image: url('../assets/images/icon.bookmarked.svg');
-            
-        }
     }
    
-
     @media screen and (max-width: 850px) {
         & {
             width: 100%;   
@@ -111,9 +107,14 @@
        }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 475px) {
         .bookmark-button {
            width: var(--height);
+           padding-left: 50px;
+
+           &:active, &:hover, &:focus {
+            -webkit-tap-highlight-color: transparent;
+           }
         }
 
         span {

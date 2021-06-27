@@ -7,13 +7,19 @@
   --out-of-stock-light-gray: #c3c3c3;
   --out-of-stock-light-cyan: #a6d6d1;
 
-  --boxes-border-radius: 15px;
-  --mobile-side-margin: 15px;
+  --boxes-border-radius: 10px;
+  --mobile-side-margin: 25px;
   --width: 730px;
 
+  height: 100vh;
+  overflow-y: auto;
   max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 
   position: relative;
   text-align: center;
