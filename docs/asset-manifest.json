@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.41b00b4f.chunk.css",
+    "main.js": "./static/js/main.4bc9745e.chunk.js",
+    "main.js.map": "./static/js/main.4bc9745e.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.7f635d09.js",
+    "runtime-main.js.map": "./static/js/runtime-main.7f635d09.js.map",
+    "static/js/2.b089cfae.chunk.js": "./static/js/2.b089cfae.chunk.js",
+    "static/js/2.b089cfae.chunk.js.map": "./static/js/2.b089cfae.chunk.js.map",
+    "static/js/3.0412aa30.chunk.js": "./static/js/3.0412aa30.chunk.js",
+    "static/js/3.0412aa30.chunk.js.map": "./static/js/3.0412aa30.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.41b00b4f.chunk.css.map": "./static/css/main.41b00b4f.chunk.css.map",
+    "static/js/2.b089cfae.chunk.js.LICENSE.txt": "./static/js/2.b089cfae.chunk.js.LICENSE.txt",
+    "static/media/ModalThanks.scss": "./static/media/icon-check.bdee5269.svg",
+    "static/media/Header.scss": "./static/media/image-hero-mobile.d4f477d4.jpg",
+    "static/media/ModalPledges.scss": "./static/media/icon-close-modal.982332f7.svg",
+    "static/media/ProjectInfo.scss": "./static/media/logo-mastercraft.dca2a831.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f635d09.js",
+    "static/js/2.b089cfae.chunk.js",
+    "static/css/main.41b00b4f.chunk.css",
+    "static/js/main.4bc9745e.chunk.js"
+  ]
+}
